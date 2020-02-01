@@ -1,0 +1,17 @@
+[user]
+	name = <name> <lastname>
+	email = <emailadress@company>
+[core]
+	autocrlf = true
+	preloadindex = true
+	ignorecase = true
+	trustctime = false
+    editor = joe
+[push]
+	default = current
+[credential]
+	helper = cache --timeout=57600
+[pull]
+	rebase = true
+[http]
+	sslVerify = false
