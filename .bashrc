@@ -11,7 +11,7 @@ bind '"\eOB": history-search-forward'
  export HISTFILESIZE=1000000				# big history file
  export HISTTIMEFORMAT="%d/%m/%y %T "		# add date to every history entry
  shopt -s histappend						# appedn to history, don't overwrite it
- export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND" # save and reload the history after each command finishes
+ export PROMPT_COMMAND="history -a;history -c;history -r;$PROMPT_COMMAND" # save and reload the history after each command finishes
 
 # Aliases
  alias df='df -h'
@@ -25,7 +25,7 @@ bind '"\eOB": history-search-forward'
  alias ...='cd ..; cd ..'
  alias ....='cd ..; cd ..; cd ..'
  alias joe='joe -backpath ~/joebackups'
- alias git-branch='git rev-parse --abbrev-ref HEAD | tr -d '\n' | pbcopy'
+ alias git-branch='git rev-parse --abbrev-ref HEAD | tr -d "\n" | pbcopy'
 
 # MacOS-like shortcuts 
  alias pbcopy='xclip -selection clipboard'
@@ -39,4 +39,3 @@ export PS1="\[\033[36m\]\u:\[\033[33;1m\]\w\[\033[m\]\$ "	# describes the termin
 export CLICOLOR=1
 export LSCOLORS=GxBxCxDxexegedxbxgxced
 export LANG="en_US.UTF-8"
-
